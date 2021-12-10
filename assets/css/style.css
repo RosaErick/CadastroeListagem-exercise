@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    margin: 0 5px;
+}
+
+
+
+.btn {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  border: 1px solid #161210;
+  padding: 5px;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #3f51b5, #ff4619);
+  border: none;
+}
+
+.nav-header {
+  background: linear-gradient(45deg, #3f51b5, #ff4619);
+  padding: 15px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.menu a {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+
+/*----- Form ------*/
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+ 
+  width: 50%;
+  margin: 50px auto;
+  flex-wrap: wrap;
+  background-color: #fff;
+
+border: 1px solid #cecece;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  padding:10px 5px;
+  box-shadow: inset 2px 2px 12px rgb(243 235 245);
+}
+
+.form-container div {
+  width: 100%;
+
+}
+
+.form-container .label-bg {
+  width: 45%;
+  display: inline-block;
+  text-align: right;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.form-container .form-line {
+  margin-bottom: 10px;
+}
+.form-container input {
+  background: #ffffff;
+  border: 1px solid lightgrey;
+  border-radius: 1px;
+  padding: 5px;
+
+}
+
+.xp-line div {
+  display: inline-block;
+  
+  width: 40%;
+}
+.form-container .xp-line {
+justify-content: end;
+}
+#name #phone{
+  box-shadow: inset 0 2px 5px lightgrey;
+
+}
+@media screen and (max-width: 419px) {
+  .form-container input[type="text"] {
+    width: 100%;
+  }
+  .form-container .label-bg {
+    width: 100%;
+    text-align: center;
+  }
+
+  .xp-line {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .xp-line div {
+    display: flex;
+    width: 100%;
+    justify-content:center;
+
+  }
+
+
+
+}
+
+
+
+/*-----List------*/
+
+.list {
+  width: 50%;
+  margin: 50px auto;
+  border-spacing: 0;
+}
+
+.list tr:nth-child(1) {
+  vertical-align: top;
+  background-color: rgba(165, 33, 33, 0.815);
+  color: white;
+  font-weight: bold;
+}
+
+.list tr td {
+  padding: 5px;
+}
