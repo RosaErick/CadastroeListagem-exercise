@@ -10,10 +10,8 @@ body {
 }
 
 label {
-    margin: 0 5px;
+  margin: 0 5px;
 }
-
-
 
 .btn {
   text-decoration: none;
@@ -51,24 +49,20 @@ label {
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
- 
   width: 50%;
-  margin: 50px auto;
+  margin: 10px auto;
   flex-wrap: wrap;
   background-color: #fff;
-
-border: 1px solid #cecece;
-  margin-bottom: 1rem;
+  border: 1px solid #cecece;
   border-radius: 1rem;
-  padding:10px 5px;
+  padding: 10px 5px;
   box-shadow: inset 2px 2px 12px rgb(243 235 245);
 }
 
 .form-container div {
   width: 100%;
-
 }
 
 .form-container .label-bg {
@@ -87,20 +81,18 @@ border: 1px solid #cecece;
   border: 1px solid lightgrey;
   border-radius: 1px;
   padding: 5px;
-
 }
 
 .xp-line div {
   display: inline-block;
-  
+
   width: 40%;
 }
 .form-container .xp-line {
-justify-content: end;
+  justify-content: end;
 }
-#name #phone{
+#name #phone {
   box-shadow: inset 0 2px 5px lightgrey;
-
 }
 @media screen and (max-width: 419px) {
   .form-container input[type="text"] {
@@ -114,21 +106,14 @@ justify-content: end;
   .xp-line {
     flex-direction: column;
     align-items: center;
-    
   }
 
   .xp-line div {
     display: flex;
     width: 100%;
-    justify-content:center;
-
+    justify-content: center;
   }
-
-
-
 }
-
-
 
 /*-----List------*/
 

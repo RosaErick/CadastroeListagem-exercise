@@ -1,34 +1,26 @@
-const people = [
-  {
-    name: "Fernando Henrique Caversan Santos Duro",
-    tel: "14999999999",
-    xp: true,
-  },
-  {
-    name: "Anderson Arcenio Matos da Costa",
-    tel: "14999999999",
-    xp: true,
-  },
-  {
-    name: "Karina do Amaral",
-    tel: "14999999999",
-    xp: false,
-  },
-  {
-    name: "Caue Sanches Padua",
-    tel: "14999999999",
-    xp: false,
-  },
-];
+const peopleRaw = localStorage.getItem("people");
+if (peopleRaw != null) {
+  var people = JSON.parse(peopleRaw);
+} else {
+  var people = [];
+}
 
-for (person in people) {
-  document.querySelector(".list tbody").innerHTML += `
-   <tr style="background-color: ${person % 2 == 0 ? "#eeee" : "#fff"}">
+function drawTable() {
+  currentLines = [...document.querySelectorAll(".dinamic-content")];
+  currentLines.forEach((element) => {
+    element.remove();
+  });
+
+  for (person in people) {
+    document.querySelector(".list tbody").innerHTML += `
+   <tr class="dinamic-content" style="background-color: ${
+     person % 2 == 0 ? "#eeee" : "#fff"
+   }">
                     <td>
                         ${people[person].name}
                     </td>
                     <td>
-                            ${people[person].tel}
+                        ${people[person].tel}
                     </td>
                     <td>
                           ${
@@ -38,10 +30,18 @@ for (person in people) {
                           }
                     </td>
                     <td>
-                        <button> Alterar </button>
+                        <button onclick="deleteUser(${person})"> Excluir </button>
                     </td>
                 </tr>
 
 
         `;
+  }
 }
+
+function deleteUser(p) {
+  people.splice(p, 1);
+  drawTable();
+  localStorage.setItem("people", JSON.stringify(people));
+}
+drawTable();
