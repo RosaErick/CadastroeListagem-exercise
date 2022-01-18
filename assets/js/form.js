@@ -1,7 +1,7 @@
 function formTest(e) {
   e.preventDefault();
 
-  var peopleRaw = localStorage.getItem("people");
+   const peopleRaw = localStorage.getItem("people");
   if (peopleRaw != null) {
     var people = JSON.parse(peopleRaw);
   } else {
@@ -16,4 +16,18 @@ function formTest(e) {
 
   localStorage.setItem("people", JSON.stringify(people));
   document.getElementById("goHome").click();
+}
+
+
+
+const mainUrl = new URL(window.location.href)
+
+console.log(mainUrl);
+
+
+const id = mainUrl.searchParams.get('person');
+
+if (id !== null) {
+
+    console.log(id);
 }

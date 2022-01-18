@@ -49,11 +49,12 @@ label {
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
   width: 50%;
+  height: 200px;
   margin: 10px auto;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background-color: #fff;
   border: 1px solid #cecece;
   border-radius: 1rem;
@@ -85,8 +86,7 @@ label {
 
 .xp-line div {
   display: inline-block;
-
-  width: 40%;
+  width:50%;
 }
 .form-container .xp-line {
   justify-content: end;
