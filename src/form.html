@@ -21,7 +21,7 @@
 
       <div class="form-line">
         <label class="label-bg" for="phone">Telefone:</label>
-        <input name="phone" id="phone" required type="text" />
+        <input name="phone" id="phone" required onkeypress="phoneTest(event)" onfocus="this.value = ''" type="text" />
       </div>
 
       <div class="form-line xp-line" style="display: flex">

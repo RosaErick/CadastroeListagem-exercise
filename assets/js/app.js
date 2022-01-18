@@ -26,12 +26,12 @@ function drawTable() {
                           ${
                             people[person].xp
                               ? '<span style="border:3px solid #BADA55; border-radius: 4px; background-color:#BADA55">Sim</span>'
-                              : "Nao"
+                              : '<span style="border:3px solid red; border-radius: 4px; background-color:red; color:#fff">Não</span>'
                           }
                     </td>
                     <td>
-                        <button onclick="deleteUser(${person})"> Excluir </button>
-                        <a href="../../src/form.html?person=${person}">Editar</a>
+                        <button class="edit-btn" onclick="deleteUser(${person})"> Excluir </button>
+                        <a class="edit-btn" href="../../src/form.html?person=${person}">Editar</a>
                     </td>
                 </tr>
 
